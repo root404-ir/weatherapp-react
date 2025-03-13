@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+.app-container {
+    width: 100%;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.bg_warm {
+    background-image: url('../src/assets/bg/wp9012193-4k-sunrise-tree-wallpapers.jpg');
+}
+
+.bg_cold {
+    background-image: url('../src/assets/bg/wp11823473-winter-snowfall-tree-wallpapers.jpg');
+
+}
+
+.bg_usual {
+    background-image: url('../src/assets/bg/wp11561702-usual-autumn-computer-wallpapers.jpg');
+
+}
