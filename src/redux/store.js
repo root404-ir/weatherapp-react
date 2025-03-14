@@ -3,3 +3,4 @@ import weatherReducer from "./weather/weatherReducer";
 import { thunk } from "redux-thunk";
 
 export const store = configureStore({ reducer: weatherReducer }, applyMiddleware(thunk))
+
