@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Date from "./Date"
 
 const Weather = () => {
     const [changeBg, setChangeBg] = useState('warm')
@@ -15,8 +16,7 @@ const Weather = () => {
                     </div>
                     <div>
                         <div className="flex flex-col items-center gap-2">
-                            <h3>دوشنبه ۱۸ بهمن ۱۴۰۰</h3>
-                            <span>ساعت ۱۸:۰۰</span>
+                            <Date />
                         </div>
                     </div>
                     <div className="bg-cyan-300 rounded-2xl py-5 px-10">
