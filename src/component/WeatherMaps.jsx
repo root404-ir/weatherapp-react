@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 const WeatherMaps = () => {
     const [weatherMap, setWeatherMap] = useState('')
     useEffect(() => {
-        axios.get('https://one-api.ir/weather/?token=634793:67961f262e957&action=weathermaps&type=pressure', {
+        axios.get('https://one-api.ir/weather/?token=634793:67961f262e957&action=weathermaps&type=temp', {
             headers: {
                 "Content-Type": "image/png"
             },

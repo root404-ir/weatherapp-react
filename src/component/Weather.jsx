@@ -5,6 +5,7 @@ import { getWeatherInfo } from "../redux/weather/weatherActions"
 import sunnyImage from '../assets/icons/sunny.png'
 import cloudyImage from '../assets/icons/cloudy.png'
 import rainImage from '../assets/icons/rain.png'
+import MainMenu from "./MainMenu"
 const sunny = sunnyImage
 const cloudy = cloudyImage
 const rainy = rainImage
@@ -54,6 +55,9 @@ const Weather = () => {
     return (
         <>
             <div className={`app-container bg_${changeBg} number flex flex-col items-center justify-center gap-20`}>
+                <div className="absolute right-5 top-5">
+                    <MainMenu />
+                </div>
                 <div className="flex flex-col justify-center items-center gap-20 bg-gray-300 rounded-2xl p-10">
                     <div>
                         <div>
