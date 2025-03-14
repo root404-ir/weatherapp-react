@@ -1,15 +1,18 @@
 import { Provider } from 'react-redux'
-import Weather from './component/Weather'
 import './style.css'
 import { store } from './redux/store'
+import { BrowserRouter } from 'react-router'
+import MainRoute from './router/mainRoute'
 
 function App() {
 
   return (
     <>
-      <Provider store={store}>
-        <Weather />
-      </Provider>
+      <BrowserRouter>
+        <Provider store={store}>
+          <MainRoute />
+        </Provider>
+      </BrowserRouter>
     </>
   )
 }
