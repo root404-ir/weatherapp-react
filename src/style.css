@@ -1,24 +1,41 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: kalameh;
+    src: url('../src/assets/fonts/kalameh/KalamehWeb-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: kalameh_number;
+    src: url('../src/assets/fonts/kalameh/KalamehWeb\(FaNum\)-Regular.woff') format('woff');
+}
+
+body {
+    font-family: kalameh;
+}
+
+.number {
+    font-family: kalameh_number !important;
+}
+
 .app-container {
     width: 100%;
     height: 100vh;
-    background-position: center center;
+    /* background-position: center center; */
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 
 .bg_warm {
-    background-image: url('../src/assets/bg/wp9012193-4k-sunrise-tree-wallpapers.jpg');
+    background-image: url('../src/assets/bg/wp10934490-hot-weather-wallpapers.jpg');
 }
 
 .bg_cold {
-    background-image: url('../src/assets/bg/wp11823473-winter-snowfall-tree-wallpapers.jpg');
+    background-image: url('../src/assets/bg/wp10208770-cold-weather-wallpapers.jpg');
 
 }
 
 .bg_usual {
     background-image: url('../src/assets/bg/wp4555534-pretty-sunny-day-wallpapers.jpg');
-
 }

@@ -2,14 +2,20 @@ import { useEffect, useState } from "react"
 import Date from "./Date"
 import { useDispatch, useSelector } from "react-redux"
 import { getWeatherInfo } from "../redux/weather/weatherActions"
+import sunnyImage from '../assets/icons/sunny.png'
+import cloudyImage from '../assets/icons/cloudy.png'
+import rainImage from '../assets/icons/rain.png'
+const sunny = sunnyImage
+const cloudy = cloudyImage
+const rainy = rainImage
 
 const Weather = () => {
     const { loading, data, error } = useSelector(state => state)
     const dispatch = useDispatch()
-    console.log([loading, data, error]);
 
     const [changeBg, setChangeBg] = useState('warm')
     const [weather, setWeather] = useState('')
+    const [weatherIcon, setWeatherIcon] = useState('')
     const [query, setQuery] = useState('')
     const handleGetWeather = (e) => {
         e.preventDefault()
@@ -35,16 +41,19 @@ const Weather = () => {
 
         if (weather === 'Clear') {
             setWeather('آفتابی')
+            setWeatherIcon(sunny)
         } else if (weather === 'Clouds') {
             setWeather('ابری')
+            setWeatherIcon(cloudy)
         } else if (weather === 'Rain') {
             setWeather('بارانی')
+            setWeatherIcon(rainy)
         }
     }, [data])
 
     return (
         <>
-            <div className={`app-container bg_${changeBg} flex flex-col items-center justify-center gap-20`}>
+            <div className={`app-container bg_${changeBg} number flex flex-col items-center justify-center gap-20`}>
                 <div className="flex flex-col justify-center items-center gap-20 bg-gray-300 rounded-2xl p-10">
                     <div>
                         <div>
@@ -60,17 +69,18 @@ const Weather = () => {
                     </div>
                     {loading ? (
                         <div>
-                            <span>در حال بارگزاری...</span>
+                            <span>در حال بارگزاری داده ها</span>
                         </div>
                     ) : data.main ? (
                         <>
-                            <div className="bg-cyan-300 rounded-2xl py-5 px-10">
+                            <div className="bg-cyan-300 text-2xl font-bold rounded-2xl py-5 px-10">
                                 <div>
                                     <span>{Math.round(data.main.temp)}</span>°C
                                 </div>
                             </div>
-                            <div>
-                                <div className="flex gap-2">
+                            <div className="w-full">
+                                <div className="flex items-center justify-between">
+                                    <img src={weatherIcon} width={100} />
                                     <span>{weather}</span>
                                     <span>|</span>
                                     <h3>{data.weather[0].main}</h3>
