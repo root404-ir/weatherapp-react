@@ -1,7 +1,6 @@
 import { useEffect, useState, useTransition } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { getWeatherMap } from "../redux/weatherMap/mapActions"
-
 const WeatherMaps = () => {
 
     const { loading, mapData, error } = useSelector(state => state.weatherMap)

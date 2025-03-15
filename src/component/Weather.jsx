@@ -9,7 +9,7 @@ import MainMenu from "./MainMenu"
 const sunny = sunnyImage
 const cloudy = cloudyImage
 const rainy = rainImage
-
+import '../style.css'
 const Weather = () => {
     const { loading, data, error } = useSelector(state => state.weather)
 
