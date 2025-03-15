@@ -6,19 +6,18 @@ export const sendWeatherRequest = () => {
         type: SEND_WEATHER_REQUEST
     }
 }
-export const receiveWeatherReaponse = (data) => {
-    return {
-        type: RECEIVE_WEATHER_REQUEST,
-        payload: data
-    }
-
-}
+export const receiveWeatherReaponse = (data) => ({
+    type: RECEIVE_WEATHER_REQUEST,
+    payload: data
+})
 export const receiveWeatherError = (error) => {
     return {
         type: RECEIVE_WEATHER_ERROR,
         payload: error
     }
 }
+
+
 export const getWeatherInfo = (query) => {
     return dispatch => {
         dispatch(sendWeatherRequest())

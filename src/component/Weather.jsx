@@ -11,7 +11,8 @@ const cloudy = cloudyImage
 const rainy = rainImage
 
 const Weather = () => {
-    const { loading, data, error } = useSelector(state => state)
+    const { loading, data, error } = useSelector(state => state.weather)
+
     const dispatch = useDispatch()
 
     const [changeBg, setChangeBg] = useState('warm')

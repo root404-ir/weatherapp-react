@@ -7,15 +7,15 @@ const MainMenu = () => {
     return (
         <>
             <div>
-                <div className="bg-white rounded-xl py-1 px-3 cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <div className="bg-white flex items-center justify-between rounded-xl py-1 px-3 cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                     <p>منوی اصلی</p>
+                    <IoIosArrowBack className={`${isMenuOpen && '-rotate-90'} transition-all`} />
                 </div>
                 {isMenuOpen && (
                     <>
                         <div className="bg-white rounded-xl py-1 px-3 mt-2">
                             <Link to={'/weathermaps'}>
                                 <span>نقشه های هواشناسی</span>
-                                <IoIosArrowBack />
                             </Link>
                         </div>
                         <div className="bg-white rounded-xl py-1 px-3 mt-2">
