@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: kalameh;
-    src: url('../src/assets/fonts/kalameh/KalamehWeb-Regular.woff') format('woff');
+    src: url('/assets/fonts/kalameh/KalamehWeb-Regular.woff') format('woff');
 }
 
 @font-face {
     font-family: kalameh_number;
-    src: url('../src/assets/fonts/kalameh/KalamehWeb\(FaNum\)-Regular.woff') format('woff');
+    src: url('/assets/fonts/kalameh/KalamehWeb\(FaNum\)-Regular.woff') format('woff');
 }
 
 body {
@@ -17,9 +17,6 @@ body {
 .number {
     font-family: kalameh_number !important;
 }
-
-
-
 
 .loader {
     width: 60px;
@@ -62,14 +59,14 @@ body {
 
 
 .bg_warm {
-    background-image: url('./assets/bg/wp10934490-hot-weather-wallpapers.jpg');
+    background-image: url(/assets/bg/wp10934490-hot-weather-wallpapers.jpg');
 }
 
 .bg_cold {
-    background-image: url('./assets/bg/wp10208770-cold-weather-wallpapers.jpg');
+    background-image: url(/assets/bg/wp10208770-cold-weather-wallpapers.jpg');
 
 }
 
 .bg_usual {
-    background-image: url('./assets/bg/wp4555534-pretty-sunny-day-wallpapers.jpg');
+    background-image: url(/assets/bg/wp4555534-pretty-sunny-day-wallpapers.jpg');
 }
