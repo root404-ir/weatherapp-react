@@ -73,7 +73,7 @@ const Weather = () => {
                     </div>
                     {loading ? (
                         <div>
-                            <span>در حال بارگزاری داده ها</span>
+                            <div className="loader"></div>
                         </div>
                     ) : data.main ? (
                         <>
