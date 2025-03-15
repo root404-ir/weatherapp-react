@@ -22,7 +22,9 @@ const WeatherMaps = () => {
     return (
         <div>
             {loading ? (
-                <h3>درحال بارگیری داده ها...</h3>
+                <div className="flex justify-center items-center h-screen">
+                    <div className="loader"></div>
+                </div>
             ) : mapData ? (
                 <div>
                     <div className="flex justify-around my-5">
