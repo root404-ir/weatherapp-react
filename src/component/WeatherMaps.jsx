@@ -4,7 +4,6 @@ import { getWeatherMap } from "../redux/weatherMap/mapActions"
 const WeatherMaps = () => {
 
     const { loading, mapData, error } = useSelector(state => state.weatherMap)
-    console.log([loading, mapData, error]);
 
     const dispatch = useDispatch()
     const [tab, setTab] = useState('pressure')

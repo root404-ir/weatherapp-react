@@ -18,7 +18,6 @@ body {
     font-family: kalameh_number !important;
 }
 
-/* HTML: <div class="loader"></div> */
 .loader {
     width: 50px;
     aspect-ratio: 1;
@@ -72,4 +71,8 @@ body {
 
 .bg_usual {
     background-image: url('assets/bg/wp4555534-pretty-sunny-day-wallpapers.jpg');
+}
+
+.bg-daily {
+    background-image: url('assets/bg/wp12139796-wonderful-morning-sky-wallpapers.jpg');
 }

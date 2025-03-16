@@ -19,7 +19,9 @@ const MainMenu = () => {
                             </Link>
                         </div>
                         <div className="bg-white rounded-xl py-1 px-3 mt-2">
-                            <span>پیش بینی روزانه</span>
+                            <Link to={'/dailyforecast'}>
+                                <span>پیش بینی روزانه</span>
+                            </Link>
                         </div>
                         <div className="bg-white rounded-xl py-1 px-3 mt-2">
                             <span>پیش بینی ساعتی</span>
