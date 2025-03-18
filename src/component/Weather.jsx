@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import Date from "./Date"
 import { useDispatch, useSelector } from "react-redux"
 import { getWeatherInfo } from "../redux/weather/weatherActions"
@@ -6,6 +6,7 @@ import sunnyImage from '../assets/icons/sunny.png'
 import cloudyImage from '../assets/icons/cloudy.png'
 import rainImage from '../assets/icons/rain.png'
 import MainMenu from "./MainMenu"
+import { QueryContext } from "../context/queryContext"
 const sunny = sunnyImage
 const cloudy = cloudyImage
 const rainy = rainImage
@@ -17,7 +18,7 @@ const Weather = () => {
     const [changeBg, setChangeBg] = useState('warm')
     const [weather, setWeather] = useState('')
     const [weatherIcon, setWeatherIcon] = useState('')
-    const [query, setQuery] = useState('')
+    const { query, setQuery } = useContext(QueryContext)
     const handleGetWeather = (e) => {
         e.preventDefault()
         dispatch(getWeatherInfo(query))

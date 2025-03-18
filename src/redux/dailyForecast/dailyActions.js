@@ -19,10 +19,10 @@ export const receiveDailyError = (error) => {
     }
 }
 
-export const getDailyWeather = () => {
+export const getDailyWeather = (query) => {
     return dispatch => {
         dispatch(sendDailyData())
-        axios.get('https://one-api.ir/weather/?token=634793:67961f262e957&action=daily&city=تهران').then(res => {
+        axios.get(`https://one-api.ir/weather/?token=634793:67961f262e957&action=daily&city=${query || 'تهران'}`).then(res => {
             dispatch(receiveDailyData(res.data.result))
         }).catch(error => {
             dispatch(receiveDailyError(error))

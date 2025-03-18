@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @font-face {
     font-family: kalameh;
     src: url('assets/fonts/kalameh/KalamehWeb-Regular.woff') format('woff');
@@ -74,5 +75,10 @@ body {
 }
 
 .bg-daily {
-    background-image: url('assets/bg/wp12139796-wonderful-morning-sky-wallpapers.jpg');
+    background-image: url('assets/bg/wp10154404-4k-weather-wallpapers.jpg');
+    background-size: cover;
+}
+
+h3 {
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.6);
 }

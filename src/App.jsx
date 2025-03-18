@@ -3,15 +3,18 @@ import './style.css'
 import { store } from './redux/store'
 import { BrowserRouter } from 'react-router'
 import MainRoute from './router/mainRoute'
+import { QueryProvider } from './context/queryContext'
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
-        <Provider store={store}>
-          <MainRoute />
-        </Provider>
+        <QueryProvider>
+          <Provider store={store}>
+            <MainRoute />
+          </Provider>
+        </QueryProvider>
       </BrowserRouter>
     </>
   )
