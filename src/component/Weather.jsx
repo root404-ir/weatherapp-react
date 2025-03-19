@@ -2,22 +2,14 @@ import { useContext, useEffect, useState } from "react"
 import Date from "./Date"
 import { useDispatch, useSelector } from "react-redux"
 import { getWeatherInfo } from "../redux/weather/weatherActions"
-import sunnyImage from '../assets/icons/sunny.png'
-import cloudyImage from '../assets/icons/cloudy.png'
-import rainImage from '../assets/icons/rain.png'
 import MainMenu from "./MainMenu"
 import { QueryContext } from "../context/queryContext"
-const sunny = sunnyImage
-const cloudy = cloudyImage
-const rainy = rainImage
 const Weather = () => {
     const { loading, data, error } = useSelector(state => state.weather)
 
     const dispatch = useDispatch()
 
     const [changeBg, setChangeBg] = useState('warm')
-    const [weather, setWeather] = useState('')
-    const [weatherIcon, setWeatherIcon] = useState('')
     const { query, setQuery } = useContext(QueryContext)
     const handleGetWeather = (e) => {
         e.preventDefault()
@@ -38,19 +30,6 @@ const Weather = () => {
         } else {
             setChangeBg('warm')
         }
-
-        const weather = data.weather[0].main
-
-        if (weather === 'Clear') {
-            setWeather('آفتابی')
-            setWeatherIcon(sunny)
-        } else if (weather === 'Clouds') {
-            setWeather('ابری')
-            setWeatherIcon(cloudy)
-        } else if (weather === 'Rain') {
-            setWeather('بارانی')
-            setWeatherIcon(rainy)
-        }
     }, [data])
 
     return (
@@ -63,7 +42,7 @@ const Weather = () => {
                     <div>
                         <div>
                             <form onSubmit={handleGetWeather}>
-                                <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} className="border-b font-bold text-blue-900 text-4xl py-2 px-4 rounded-xl" placeholder={data.name || "نام شهر یا کشور"} />
+                                <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} className="border-b font-bold text-blue-900 text-4xl py-2 px-4 rounded-xl" placeholder={ "نام شهر یا کشور"} />
                             </form>
                         </div>
                     </div>
@@ -85,8 +64,7 @@ const Weather = () => {
                             </div>
                             <div className="w-full">
                                 <div className="flex items-center justify-between">
-                                    <img src={weatherIcon} width={100} />
-                                    <span>{weather}</span>
+                                    <h3>{data.weather[0].description}</h3>
                                     <span>|</span>
                                     <h3>{data.weather[0].main}</h3>
                                 </div>

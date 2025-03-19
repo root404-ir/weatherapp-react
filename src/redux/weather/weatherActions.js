@@ -21,8 +21,8 @@ export const receiveWeatherError = (error) => {
 export const getWeatherInfo = (query) => {
     return dispatch => {
         dispatch(sendWeatherRequest())
-        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=8d6f6846f434b94fe4a1ac65bf7719ad`).then(res => {
-            dispatch(receiveWeatherReaponse(res.data))
+        axios.get(`https://one-api.ir/weather/?token=634793:67961f262e957&action=current&city=${query}`).then(res => {
+            dispatch(receiveWeatherReaponse(res.data.result))
         }).catch(error => {
             dispatch(receiveWeatherError(error))
         })
