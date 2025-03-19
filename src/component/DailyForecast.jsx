@@ -30,6 +30,7 @@ const DailyForecast = () => {
         dispatch(getDailyWeather(query))
         setQuery('')
     }
+
     return (
         <>
             <div className='bg-daily min-h-screen flex flex-col'>
@@ -40,9 +41,9 @@ const DailyForecast = () => {
                             <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} placeholder={'نام شهر مورد نظر را وارد کنید...'} className='bg-white border-b border-b-gray-600 rounded-lg py-1 px-2 w-64 transition-all focus:outline-0 focus:w-80' />
                         </form>
                     </div>
-                    <div className='grid grid-cols-4 gap-3'>
+                    <div className='grid grid-cols-4 text-white gap-3'>
                         {dailyData?.list?.map((day, index) => (
-                            <div key={index} className='border rounded flex flex-col items-center justify-center gap-2 p-4 mt-5'>
+                            <div key={index} className='border backdrop-blur-3xl  rounded flex flex-col items-center justify-center gap-2 p-4 mt-5'>
                                 <div className='flex items-center'>
                                     <img src={calendarGif} alt="" width={50} height={50} />
                                     <p> تاریخ: {new Date(day.dt * 1000).toLocaleDateString("fa-IR")}</p>
