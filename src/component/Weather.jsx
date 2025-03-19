@@ -42,7 +42,7 @@ const Weather = () => {
                     <div>
                         <div>
                             <form onSubmit={handleGetWeather}>
-                                <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} className="border-b font-bold text-blue-900 text-4xl py-2 px-4 rounded-xl" placeholder={ "نام شهر یا کشور"} />
+                                <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} className="border-b font-bold text-blue-900 text-4xl py-2 px-4 rounded-xl" placeholder={"نام شهر یا کشور"} />
                             </form>
                         </div>
                     </div>
