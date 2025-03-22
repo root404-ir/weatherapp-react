@@ -2,7 +2,6 @@ import { Route, Routes } from 'react-router'
 import Weather from '../component/Weather'
 import WeatherMaps from '../component/WeatherMaps'
 import DailyForecast from '../component/DailyForecast'
-
 const MainRoute = () => {
     return (
         <Routes>

@@ -36,7 +36,7 @@ const Date = () => {
     }, [])
     return (
         <div className="flex flex-col items-center gap-3">
-            <h3 className="text-3xl">{date}</h3>
+            <h3 className="md:text-3xl text-xl">{date}</h3>
             <span className="text-md">{time}</span>
         </div>
     )

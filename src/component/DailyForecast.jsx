@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getDailyWeather } from '../redux/dailyForecast/dailyActions'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
 import cloudGif from '../assets/icons/gif/Animation - 1742205598510.gif'
 import calendarGif from '../assets/icons/gif/Animation - 1742213343191.gif'
 import tempGif from '../assets/icons/gif/Animation - 1742220601938.gif'
@@ -11,6 +10,7 @@ import windGif from '../assets/icons/gif/Animation - 1742222892071.gif'
 import humidityGif from '../assets/icons/gif/Animation - 1742222547924.gif'
 import nightGif from '../assets/icons/gif/Animation - 1742222727754.gif'
 import { QueryContext } from '../context/queryContext';
+
 const DailyForecast = () => {
     const { dailyData } = useSelector(state => state.dailyWeather)
 
@@ -41,7 +41,7 @@ const DailyForecast = () => {
                             <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} placeholder={'نام شهر مورد نظر را وارد کنید...'} className='bg-white border-b border-b-gray-600 rounded-lg py-1 px-2 w-64 transition-all focus:outline-0 focus:w-80' />
                         </form>
                     </div>
-                    <div className='grid grid-cols-4 text-white gap-3'>
+                    <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 text-white gap-3'>
                         {dailyData?.list?.map((day, index) => (
                             <div key={index} className='border backdrop-blur-3xl  rounded flex flex-col items-center justify-center gap-2 p-4 mt-5'>
                                 <div className='flex items-center'>

@@ -1,14 +1,13 @@
 @import "tailwindcss";
 
-
 @font-face {
     font-family: kalameh;
-    src: url('assets/fonts/kalameh/KalamehWeb-Regular.woff') format('woff');
+    src: url('/fonts/kalameh/KalamehWeb-Regular.woff') format('woff');
 }
 
 @font-face {
     font-family: kalameh_number;
-    src: url('assets/fonts/kalameh/KalamehWeb\(FaNum\)-Regular.woff') format('woff');
+    src: url('/fonts/kalameh/KalamehWebNum.woff') format('woff');
 }
 
 body {
@@ -58,27 +57,28 @@ body {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+    position: fixed;
+}
+
+
+h3 {
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.6);
 }
 
 
 .bg_warm {
-    background-image: url('assets/bg/wp10934490-hot-weather-wallpapers.jpg');
+    background-image: url('/bg/wp10934490-hot-weather-wallpapers.jpg');
 }
 
 .bg_cold {
-    background-image: url('assets/bg/wp10208770-cold-weather-wallpapers.jpg');
-
+    background-image: url('/bg/wp10208770-cold-weather-wallpapers.jpg');
 }
 
 .bg_usual {
-    background-image: url('assets/bg/wp4555534-pretty-sunny-day-wallpapers.jpg');
+    background-image: url('/bg/wp4555534-pretty-sunny-day-wallpapers.jpg');
 }
 
 .bg-daily {
-    background-image: url('assets/bg/wp9012193-4k-sunrise-tree-wallpapers.jpg');
+    background-image: url('/bg/wp9012193-4k-sunrise-tree-wallpapers.jpg');
     background-size: cover;
-}
-
-h3 {
-    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.6);
 }

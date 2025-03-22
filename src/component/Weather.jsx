@@ -38,11 +38,11 @@ const Weather = () => {
                 <div className="absolute right-5 top-5">
                     <MainMenu />
                 </div>
-                <div className="flex flex-col justify-center items-center gap-20 bg-gray-300 rounded-2xl p-10">
+                <div className="flex md:w-xl w-[300px] flex-col justify-center items-center gap-20 bg-gray-300 rounded-2xl p-10">
                     <div>
                         <div>
                             <form onSubmit={handleGetWeather}>
-                                <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} className="border-b font-bold text-blue-900 text-4xl py-2 px-4 rounded-xl" placeholder={"نام شهر یا کشور"} />
+                                <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} className="border-b md:w-xl w-[300px] font-bold text-blue-900 md:text-4xl text-xl py-2 px-4 rounded-xl" placeholder={"نام شهر یا کشور"} />
                             </form>
                         </div>
                     </div>
@@ -70,9 +70,9 @@ const Weather = () => {
                                 </div>
                             </div></>
                     ) : error ? (
-                        <h3>نام شهر یا کشور را به درستی وارد کنید!</h3>
+                        <h3 className="md:text-2xl text-lg">نام شهر یا را به درستی وارد کنید!</h3>
                     ) : (
-                        <h3>لطفا نام شهر یا کشور مورد نظر را وارد کنید</h3>
+                        <h3 className="md:text-2xl text-lg">لطفا نام شهر مورد نظر را وارد کنید</h3>
                     )}
 
                 </div>

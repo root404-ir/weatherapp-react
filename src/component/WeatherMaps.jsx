@@ -24,8 +24,8 @@ const WeatherMaps = () => {
                     <div className="loader"></div>
                 </div>
             ) : mapData ? (
-                <div>
-                    <div className="flex justify-around my-5">
+                <div className="min-w-[600px]">
+                    <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-3 my-5">
                         <button className={`border border-gray-500 py-1 px-2 rounded-xl cursor-pointer ${tab === 'pressure' && 'bg-black text-white'}`} onClick={() => handleSwitchTab('pressure')}>فشار جوی</button>
                         <button className={`border border-gray-500 py-1 px-2 rounded-xl cursor-pointer ${tab === 'precipitation' && 'bg-black text-white'}`} onClick={() => handleSwitchTab('precipitation')}>بارش</button>
                         <button className={`border border-gray-500 py-1 px-2 rounded-xl cursor-pointer ${tab === 'clouds' && 'bg-black text-white'}`} onClick={() => handleSwitchTab('clouds')}>پراکندگی ابرها</button>
@@ -33,7 +33,7 @@ const WeatherMaps = () => {
                         <button className={`border border-gray-500 py-1 px-2 rounded-xl cursor-pointer ${tab === 'winds_dir' && 'bg-black text-white'}`} onClick={() => handleSwitchTab('winds_dir')}>پراکندگی، شدت و جهت وزش بادها</button>
                         <button className={`border border-gray-500 py-1 px-2 rounded-xl cursor-pointer ${tab === 'temp' && 'bg-black text-white'}`} onClick={() => handleSwitchTab('temp')}>پراکندگی و شدت دما</button>
                     </div>
-                    <img src={mapData} alt="" className="w-full" />
+                    <img src={mapData} alt="" className="w-full min-w-[600px] h-auto mx-auto" />
                 </div >
             ) : error && (
                 <h3>{error}</h3>
